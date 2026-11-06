@@ -1,0 +1,85 @@
+:root {
+  --vp-c-brand-1: #0fa66a;
+  --vp-c-brand-2: #0c8f5a;
+  --vp-c-brand-3: #087548;
+  --vp-c-brand-soft: rgba(24, 217, 139, 0.14);
+  --vp-button-brand-bg: #18d98b;
+  --vp-button-brand-hover-bg: #69f5bb;
+  --vp-button-brand-text: #06130e;
+  --vp-home-hero-name-color: #18d98b;
+  --vp-code-color: #087548;
+}
+
+.dark {
+  --vp-c-bg: #090909;
+  --vp-c-bg-alt: #0f1110;
+  --vp-c-bg-elv: #151816;
+  --vp-c-bg-soft: #111512;
+  --vp-c-brand-1: #69f5bb;
+  --vp-c-brand-2: #18d98b;
+  --vp-c-brand-3: #0fa66a;
+  --vp-code-color: #69f5bb;
+}
+
+.VPNavBarTitle .logo {
+  width: 26px;
+  height: 31px;
+  object-fit: contain;
+}
+
+.VPNavBarMenuLink[href='https://wallet.inscrib3.com'],
+.VPNavScreenMenuLink[href='https://wallet.inscrib3.com'] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  color: #06130e !important;
+  background: #18d98b;
+  border: 1px solid #18d98b;
+  border-radius: 999px;
+  padding: 0 16px;
+  line-height: 1;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.VPNavBarMenuLink[href='https://wallet.inscrib3.com']:hover,
+.VPNavScreenMenuLink[href='https://wallet.inscrib3.com']:hover {
+  background: #69f5bb;
+  border-color: #69f5bb;
+  transform: translateY(-1px);
+}
+
+.VPNavBarMenuLink[href='https://wallet.inscrib3.com'] {
+  align-self: center;
+  margin-left: 8px;
+}
+
+@media (max-width: 767px) {
+  .VPNavScreenMenuLink[href='https://wallet.inscrib3.com'] {
+    width: fit-content;
+    margin-top: 8px;
+  }
+}
+
+.vp-doc h1 {
+  letter-spacing: -0.035em;
+}
+
+.vp-doc h2 {
+  border-top: 0;
+  margin-top: 40px;
+}
+
+.vp-doc a {
+  text-underline-offset: 3px;
+}
+
+.vp-doc div[class*='language-'] {
+  border: 1px solid var(--vp-c-divider);
+}
+
+.VPDocAsideOutline .outline-link.active {
+  color: var(--vp-c-brand-1);
+}
