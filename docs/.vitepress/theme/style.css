@@ -118,9 +118,10 @@ body {
 
 .VPNavBarMenuLink[href*='chromewebstore.google.com'],
 .VPNavScreenMenuLink[href*='chromewebstore.google.com'] {
-  min-height: 38px;
+  height: 38px;
   padding: 0 15px;
   display: inline-flex;
+  align-self: center;
   align-items: center;
   justify-content: center;
   border: 1px solid #34d399;
@@ -145,9 +146,10 @@ body {
 
 .VPNavBarMenuLink[href='https://wallet.inscrib3.com'],
 .VPNavScreenMenuLink[href='https://wallet.inscrib3.com'] {
-  min-height: 38px;
+  height: 38px;
   padding: 0 14px;
   display: inline-flex;
+  align-self: center;
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.18);
