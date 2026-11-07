@@ -164,6 +164,10 @@ body {
   text-transform: uppercase;
 }
 
+.VPNavBarMenuLink[href='https://wallet.inscrib3.com'] {
+  margin-left: 8px;
+}
+
 .VPNavBarMenuLink[href='https://wallet.inscrib3.com']:hover,
 .VPNavScreenMenuLink[href='https://wallet.inscrib3.com']:hover {
   border-color: rgba(52, 211, 153, 0.5);
