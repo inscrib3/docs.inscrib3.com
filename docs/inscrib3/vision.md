@@ -9,11 +9,11 @@ We want to make Bitcoin programmability practical through products that hide com
 
 ## The direction
 
-Inscrib3's new phase focuses on open-source applications built with Arkade. The wallet is the first node: it gives users a non-custodial interface and Apps a provider to interact with.
+Inscrib3's new phase focuses on open-source applications built with Arkade. The wallet is the first node: it gives users a self-custodial interface and Apps a provider to interact with.
 
 ### [Available now — Inscrib3 Wallet](/wallet/overview)
 
-Browser extension and installable PWA for the Ark protocol.
+Browser extension and installable PWA built with Arkade.
 
 ## What comes next
 

@@ -4,19 +4,20 @@ export default defineConfig({
   lang: 'en-US',
   title: 'Inscrib3 Docs',
   description: 'Open-source products making Bitcoin programmable, built with Arkade.',
+  appearance: false,
   cleanUrls: true,
   lastUpdated: true,
   sitemap: {
     hostname: 'https://docs.inscrib3.com',
   },
   head: [
-    ['link', { rel: 'icon', href: '/logo.png', type: 'image/png' }],
-    ['meta', { name: 'theme-color', content: '#090909' }],
+    ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
+    ['meta', { name: 'theme-color', content: '#000000' }],
     ['meta', { property: 'og:site_name', content: 'Inscrib3 Docs' }],
   ],
   themeConfig: {
-    logo: '/logo.png',
-    siteTitle: false,
+    logo: '/logo.svg',
+    siteTitle: 'INSCRIB3 / DOCS',
     search: {
       provider: 'local',
     },
@@ -27,7 +28,7 @@ export default defineConfig({
         text: 'Install extension',
         link: 'https://chromewebstore.google.com/detail/inscrib3/hafphignbjdmblopkophkohgnphalclg',
       },
-      { text: 'Open wallet', link: 'https://wallet.inscrib3.com' },
+      { text: 'Open web wallet', link: 'https://wallet.inscrib3.com' },
     ],
     sidebar: [
       {

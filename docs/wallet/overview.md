@@ -1,11 +1,11 @@
 ---
 title: "Inscrib3 Wallet"
-description: "A non-custodial Bitcoin wallet for Ark, available as a browser extension and PWA."
+description: "Your self-custodial gateway to programmable Bitcoin, built with Arkade."
 ---
 
 # Inscrib3 Wallet
 
-Inscrib3 Wallet is a non-custodial wallet for the Ark protocol. Keys remain on the device, and the same experience is available in two formats: a browser extension for App integration and a PWA that runs in or can be installed from the browser.
+Inscrib3 Wallet is your self-custodial gateway to programmable Bitcoin, built with Arkade. Keys remain on the device, and the same experience is available in two formats: a browser extension for App integration and a PWA that runs in or can be installed from the browser.
 
 ::: warning
 The wallet is experimental software and can move real Bitcoin. It comes with no warranties or guaranteed support.
@@ -13,7 +13,7 @@ The wallet is experimental software and can move real Bitcoin. It comes with no 
 
 ## Features
 
-- send and receive through the Ark protocol;
+- send and receive offchain through Arkade;
 - receive and pay over Lightning through atomic swaps;
 - enter from on-chain through a boarding address and collaboratively exit to Bitcoin addresses;
 - view and send Ark assets;

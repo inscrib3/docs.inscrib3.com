@@ -5,7 +5,7 @@ description: "Essential guidance for using and integrating Inscrib3 Wallet respo
 
 # Security and risk model
 
-Inscrib3 Wallet is non-custodial: keys never leave the device. This removes custody by Inscrib3, but makes protecting the seed and reviewing requests essential.
+Inscrib3 Wallet is self-custodial: keys never leave the device. This removes custody by Inscrib3, but makes protecting the seed and reviewing requests essential.
 
 ::: danger
 Losing the mnemonic phrase may make funds unrecoverable. Exposing it allows third parties to control them.

@@ -21,19 +21,17 @@ Choose between the `window.arkade` provider and the PWA fallback.
 
 ## Inscrib3 Wallet
 
-[Inscrib3 Wallet](https://wallet.inscrib3.com) is the first product in this new chapter: a non-custodial Bitcoin wallet for the Ark protocol, available as a browser extension and an installable PWA.
+[Inscrib3 Wallet](https://wallet.inscrib3.com) is your gateway to programmable Bitcoin: a self-custodial wallet built with Arkade, available as a browser extension and an installable PWA.
 
-### Non-custodial
+### [Install the browser extension](https://chromewebstore.google.com/detail/inscrib3/hafphignbjdmblopkophkohgnphalclg)
 
-Keys remain on the user's device.
+The recommended experience for Chrome, Brave, and other Chromium-based browsers. Keep Inscrib3 Wallet one click away and connect directly to supported Bitcoin applications.
 
-### Two interfaces
+### [Open the web wallet](https://wallet.inscrib3.com)
 
-A browser extension for Apps and a PWA that runs in the browser.
+Start immediately without installing anything. The web wallet runs in your browser and can be installed as a PWA on supported devices.
 
-### [Install the extension](https://chromewebstore.google.com/detail/inscrib3/hafphignbjdmblopkophkohgnphalclg)
-
-Get Inscrib3 Wallet from the Chrome Web Store for Chrome, Brave, and other Chromium-based browsers.
+Both options are self-custodial: keys remain on the user's device.
 
 ### [Open source](https://github.com/inscrib3/arkade-wallet)
 
