@@ -23,6 +23,10 @@ export default defineConfig({
     nav: [
       { text: 'Website', link: 'https://inscrib3.com' },
       { text: 'GitHub', link: 'https://github.com/inscrib3' },
+      {
+        text: 'Install extension',
+        link: 'https://chromewebstore.google.com/detail/inscrib3/hafphignbjdmblopkophkohgnphalclg',
+      },
       { text: 'Open wallet', link: 'https://wallet.inscrib3.com' },
     ],
     sidebar: [

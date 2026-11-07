@@ -31,6 +31,10 @@ Keys remain on the user's device.
 
 A browser extension for Apps and a PWA that runs in the browser.
 
+### [Install the extension](https://chromewebstore.google.com/detail/inscrib3/hafphignbjdmblopkophkohgnphalclg)
+
+Get Inscrib3 Wallet from the Chrome Web Store for Chrome, Brave, and other Chromium-based browsers.
+
 ### [Open source](https://github.com/inscrib3/arkade-wallet)
 
 Public, verifiable code open to contributions.

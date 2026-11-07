@@ -27,13 +27,23 @@ Use your browser's install command to add the PWA to your home screen or desktop
 
 ## Browser extension
 
-Releases include an archive for Chromium browsers. Chrome, Brave, and other Chromium-based browsers are supported. A Firefox build exists but is neither published nor tested.
+The extension is available from the Chrome Web Store for Chrome, Brave, and other Chromium-based browsers. A Firefox build exists but is neither published nor tested.
 
-### 1. Download the release
+### Install from the Chrome Web Store
+
+Open [Inscrib3 Wallet on the Chrome Web Store](https://chromewebstore.google.com/detail/inscrib3/hafphignbjdmblopkophkohgnphalclg), select **Add to Chrome**, and confirm the installation. In other Chromium-based browsers, the button label may differ.
+
+Once installed, pin the extension from the browser toolbar for quick access.
+
+### Install manually from GitHub
+
+GitHub releases also include an archive for Chromium browsers.
+
+#### 1. Download the release
 
 Download the latest ZIP from [GitHub Releases](https://github.com/inscrib3/arkade-wallet/releases).
 
-### 2. Verify the archive
+#### 2. Verify the archive
 
 Check the file against the `SHA256SUMS` included in the release.
 
@@ -41,11 +51,11 @@ Check the file against the `SHA256SUMS` included in the release.
 shasum -a 256 -c SHA256SUMS
 ```
 
-### 3. Open extensions
+#### 3. Open extensions
 
 Visit `chrome://extensions` or `brave://extensions` and enable Developer mode.
 
-### 4. Load the extension
+#### 4. Load the extension
 
 Extract the ZIP, select **Load unpacked**, and choose the extracted directory.
 

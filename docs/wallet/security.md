@@ -13,7 +13,7 @@ Losing the mnemonic phrase may make funds unrecoverable. Exposing it allows thir
 
 ## For users
 
-- download the extension only from official releases and verify `SHA256SUMS`;
+- install the extension from the [official Chrome Web Store listing](https://chromewebstore.google.com/detail/inscrib3/hafphignbjdmblopkophkohgnphalclg), or use an official GitHub release and verify `SHA256SUMS`;
 - store the mnemonic phrase offline and never enter it into websites or Apps;
 - check the origin, network, address, and amount in every approval window;
 - use only funds you can afford to lose;
