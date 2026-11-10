@@ -74,6 +74,35 @@ const txid = await window.arkade.sendAsset(
 
 Each asset `amount` uses raw units without applying decimals. Read `metadata.decimals` from `getAssets()` when building your interface.
 
+## Issue, reissue, and burn assets
+
+| Method | Returns | Approval |
+| --- | --- | --- |
+| `issueAsset({ amount, controlAssetId?, metadata? })` | `{ arkTxId, assetId }` | Every call |
+| `reissueAsset({ assetId, amount })` | Transaction ID | Every call |
+| `burnAsset({ assetId, amount })` | Transaction ID | Every call |
+
+```js asset-lifecycle.js
+const issued = await window.arkade.issueAsset({
+  amount: 1_000_000,
+  metadata: { name: 'Example Token', ticker: 'EXT', decimals: 2 },
+});
+
+const reissuanceTxid = await window.arkade.reissueAsset({
+  assetId: issued.assetId,
+  amount: 50_000,
+});
+
+const burnTxid = await window.arkade.burnAsset({
+  assetId: issued.assetId,
+  amount: 20_000,
+});
+```
+
+Amounts are positive safe integers in raw units. Reissuance requires an associated control asset held by the active wallet; burning requires only a sufficient balance and permanently destroys the units.
+
+See [Asset issuance, reissuance, and burn](/provider/assets) for control assets, validation rules, and complete examples.
+
 ## Settlement
 
 `settle()` renews spendable VTXOs and returns the batch txid. Every call requires approval.

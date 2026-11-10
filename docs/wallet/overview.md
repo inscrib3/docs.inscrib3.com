@@ -16,11 +16,15 @@ The wallet is experimental software and can move real Bitcoin. It comes with no 
 - send and receive offchain through Arkade;
 - receive and pay over Lightning through atomic swaps;
 - enter from on-chain through a boarding address and collaboratively exit to Bitcoin addresses;
-- view and send Ark assets;
+- create, view, send, reissue, and burn Ark assets;
 - multiple accounts, imported seeds, coin control, and auto-lock;
 - emergency unilateral exit without the Ark server's cooperation.
 
 ## Two modes, one wallet codebase
+
+### [Manage the asset lifecycle](/wallet/assets)
+
+Create fixed or reissuable Arkade assets, control additional supply, and permanently burn held units.
 
 ### Extension
 

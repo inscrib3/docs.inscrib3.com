@@ -39,6 +39,9 @@ interface ArkadeProvider {
     assets: Array<{ assetId: string; amount: number }>,
     bitcoinAmount?: number,
   ): Promise<string>;
+  issueAsset(input: IssueAssetInput): Promise<IssueAssetResult>;
+  reissueAsset(input: AssetOperationInput): Promise<string>;
+  burnAsset(input: AssetOperationInput): Promise<string>;
   settle(): Promise<string>;
   signMessage(message: string): Promise<SignedMessage>;
 
@@ -98,6 +101,28 @@ interface AssetInfo {
     decimals?: number;
     icon?: string;
   };
+  controlAssetId?: string;
+}
+
+interface IssueAssetInput {
+  amount: number;
+  controlAssetId?: string;
+  metadata?: {
+    name?: string;
+    ticker?: string;
+    decimals?: number;
+    icon?: string;
+  };
+}
+
+interface IssueAssetResult {
+  arkTxId: string;
+  assetId: string;
+}
+
+interface AssetOperationInput {
+  assetId: string;
+  amount: number;
 }
 
 interface TxHistoryEntry {

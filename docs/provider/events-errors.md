@@ -64,6 +64,9 @@ try {
 | `User rejected the transaction` | The user rejected or closed the send request |
 | `User rejected the signature request` | The user rejected or closed the signature request |
 | `User rejected the settlement` | The user rejected or closed the settlement request |
+| `User rejected the asset issuance` | The user rejected or closed an issuance request |
+| `User rejected the asset reissuance` | The user rejected or closed a reissuance request |
+| `User rejected the asset burn` | The user rejected or closed a burn request |
 | `The active account or network changed while this request was open, so nothing was done. Ask the site to try again.` | The context changed during approval |
 
 Opening more than three approval windows for the same origin is also treated as a rejection. Server-side errors, such as insufficient funds or an amount below the minimum, are passed through with their original message.

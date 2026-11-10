@@ -37,6 +37,10 @@ Both options are self-custodial: keys remain on the user's device.
 
 Public, verifiable code open to contributions.
 
+### [Create and manage Arkade assets](/wallet/assets)
+
+Issue fixed or reissuable assets, control future supply, and permanently burn units from the wallet.
+
 ::: warning
 Inscrib3 Wallet is experimental software that can move real Bitcoin. Do not deposit more than you can afford to lose.
 :::
