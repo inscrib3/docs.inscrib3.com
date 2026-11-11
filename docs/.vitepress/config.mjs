@@ -65,6 +65,7 @@ export default defineConfig({
     },
     nav: [
       { text: 'Website', link: 'https://inscrib3.com' },
+      { text: 'Mutinynet App', link: 'https://app.mutinynet.inscrib3.com' },
       { text: 'GitHub', link: 'https://github.com/inscrib3' },
       {
         text: 'Install extension',
@@ -77,7 +78,19 @@ export default defineConfig({
         text: 'Get started',
         items: [
           { text: 'Introduction', link: '/' },
+          { text: 'Use the Mutinynet App', link: '/app/getting-started' },
           { text: 'App quickstart', link: '/getting-started/quickstart' },
+        ],
+      },
+      {
+        text: 'Inscrib3 App',
+        items: [
+          { text: 'App overview', link: '/app/overview' },
+          { text: 'Get started on Mutinynet', link: '/app/getting-started' },
+          { text: 'Swaps and price charts', link: '/app/swaps' },
+          { text: 'Pools and liquidity', link: '/app/pools-liquidity' },
+          { text: 'Points and Mainnet migration', link: '/app/points' },
+          { text: 'Risks and troubleshooting', link: '/app/security' },
         ],
       },
       {
@@ -86,6 +99,7 @@ export default defineConfig({
           { text: 'What is Inscrib3', link: '/inscrib3/about' },
           { text: 'Our journey', link: '/inscrib3/journey' },
           { text: 'Vision and direction', link: '/inscrib3/vision' },
+          { text: 'Open-source projects', link: '/inscrib3/open-source' },
         ],
       },
       {
