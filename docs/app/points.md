@@ -13,10 +13,19 @@ The Mutinynet release includes a public points program for participation in perm
 | --- | --- |
 | Pool reaches `opened` | 10 |
 | Swap reaches `settled` | At least 1 |
+| Referred wallet opens a pool or settles a swap | 1 per action |
 
 For swaps in a BTC pool, points scale at **one point per sat-equivalent of protocol fee**, with a minimum of one. When the fee is paid in the token side of a BTC pool, its sat equivalent is calculated from the pool reserves captured for the request. Asset-to-asset swaps currently receive one point until a reliable BTC valuation path is available.
 
 Points are not awarded for quotes, rejected approvals, unfunded requests, failed swaps, refunds, liquidity deposits, or liquidity withdrawals.
+
+## Referrals
+
+Connect the wallet and open **My Activity** to find your personal referral link. Share it directly on X or copy it for Discord.
+
+When another wallet opens the link, the referral code is saved locally and attached to its first eligible action. The relationship then remains associated with that wallet identity. You receive 1 point whenever that wallet successfully opens a pool or settles a swap.
+
+Referral rewards are settlement-only and idempotent. Failed, refunded, repeated, and self-referred actions do not earn points. Referral points migrate to Mainnet with the same wallet identity like the rest of the score.
 
 ## Settlement and duplicate protection
 
