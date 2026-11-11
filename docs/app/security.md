@@ -48,4 +48,4 @@ Only opened pools and settled swaps qualify. Confirm the action's terminal statu
 
 ## Verify the implementation
 
-The [frontend](https://github.com/inscrib3/app.mutinynet.inscrib3.com), [API and contracts](https://github.com/inscrib3/arkade-api), and [wallet](https://github.com/inscrib3/arkade-wallet) are open source. Review releases and report security issues privately through the affected repository's security channel rather than publishing an exploit.
+The [App frontend](https://github.com/inscrib3/app.mutinynet.inscrib3.com) and [wallet](https://github.com/inscrib3/arkade-wallet) are open source. Review releases and report security issues privately through the affected repository's security channel rather than publishing an exploit.

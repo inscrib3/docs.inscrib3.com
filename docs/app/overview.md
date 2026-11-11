@@ -39,10 +39,9 @@ For swaps and liquidity operations, the wallet funds a request-specific covenant
 
 ## Open-source components
 
-The complete stack can be inspected independently:
+The public user-facing components can be inspected independently:
 
 - [App frontend](https://github.com/inscrib3/app.mutinynet.inscrib3.com);
-- [Coordinator API and contracts](https://github.com/inscrib3/arkade-api);
 - [Inscrib3 Wallet](https://github.com/inscrib3/arkade-wallet);
 - [Documentation](https://github.com/inscrib3/docs.inscrib3.com);
 - [Main website](https://github.com/inscrib3/inscrib3.com).

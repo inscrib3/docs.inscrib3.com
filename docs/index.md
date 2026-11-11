@@ -74,6 +74,6 @@ An App can communicate with the wallet in two ways:
 
 Implement provider detection and the PWA fallback.
 
-## Everything is open source
+## Explore our open-source code
 
-The wallet, App frontend, coordinator API, website, and these docs are public and auditable. See the complete [open-source project directory](/inscrib3/open-source).
+The wallet, App frontend, website, and these docs are public and auditable. See the complete [open-source project directory](/inscrib3/open-source).
