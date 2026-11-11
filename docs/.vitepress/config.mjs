@@ -66,6 +66,7 @@ export default defineConfig({
     nav: [
       { text: 'Website', link: 'https://inscrib3.com' },
       { text: 'Mutinynet App', link: 'https://app.mutinynet.inscrib3.com' },
+      { text: 'Discord', link: 'https://discord.gg/dZ7GSFb2ST' },
       { text: 'GitHub', link: 'https://github.com/inscrib3' },
       {
         text: 'Install extension',
@@ -136,6 +137,7 @@ export default defineConfig({
       label: 'On this page',
     },
     socialLinks: [
+      { icon: 'discord', link: 'https://discord.gg/dZ7GSFb2ST' },
       { icon: 'github', link: 'https://github.com/inscrib3' },
       { icon: 'x', link: 'https://x.com/inscrib3' },
     ],

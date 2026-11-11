@@ -33,4 +33,4 @@ We do not publish unconfirmed dates or features. The roadmap describes a product
 3. **Open source.** Make code and decisions verifiable.
 4. **Self-custody.** Give users control over their keys.
 
-Follow updates on [GitHub](https://github.com/inscrib3) and [X](https://x.com/inscrib3).
+Join the community on [Discord](https://discord.gg/dZ7GSFb2ST), follow updates on [X / Twitter](https://x.com/inscrib3), and explore our public projects on [GitHub](https://github.com/inscrib3).

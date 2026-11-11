@@ -40,3 +40,7 @@ Arkade is independently developed by Ark Labs. Inscrib3 uses it to build product
 ## We build in public
 
 We believe useful Bitcoin infrastructure grows through experimentation, transparency, and collaboration. Our projects are available in the [Inscrib3 GitHub organization](https://github.com/inscrib3).
+
+## Community
+
+Join the [Inscrib3 Discord](https://discord.gg/dZ7GSFb2ST) to discuss the wallet, the Mutinynet App, integrations, and development. Follow product updates on [X / Twitter](https://x.com/inscrib3) and explore our public projects on [GitHub](https://github.com/inscrib3).
