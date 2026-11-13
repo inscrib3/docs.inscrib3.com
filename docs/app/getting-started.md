@@ -1,6 +1,6 @@
 ---
 title: "Get started on Mutinynet"
-description: "Install Inscrib3 Wallet, switch to Mutinynet, connect to the App, and safely try swaps and pools."
+description: "Install Inscrib3 Wallet, switch to Mutinynet, connect to the App, and safely try swaps, pools, and launches."
 ---
 
 # Get started on Mutinynet
@@ -37,6 +37,7 @@ The header must show **MUTINYNET**. Before every approval, verify the origin, as
 - **Pools:** inspect reserves, price history, activity, fees, and controlled-supply warnings.
 - **Add / Remove:** contribute assets at the pool ratio or redeem LP assets pro rata.
 - **Create:** issue an asset or bootstrap a permissionless pool.
+- **Launches:** inspect or create a fixed-supply token, trade on its BTC curve, and follow graduation into permanent liquidity.
 - **Activity:** inspect your requests, score, rank, breakdown, and leaderboard.
 
 Requests may remain funded while waiting for a settlement sweep. Do not repeat a request simply because it is not immediate; check its status under **Activity** first.
@@ -45,5 +46,6 @@ Requests may remain funded while waiting for a settlement sweep. Do not repeat a
 
 - [Swaps and price charts](/app/swaps)
 - [Pools and liquidity](/app/pools-liquidity)
+- [Bitcoin-native launchpad](/app/launchpad)
 - [Points and Mainnet migration](/app/points)
 - [Risks and troubleshooting](/app/security)

@@ -1,6 +1,6 @@
 ---
 title: "Inscrib3 App"
-description: "Open-source native liquidity, swaps, pools and portable rewards on Arkade, currently live on Mutinynet."
+description: "Open-source native liquidity, swaps, pools, token launches and portable rewards on Arkade, currently live on Mutinynet."
 ---
 
 # Inscrib3 App
@@ -17,6 +17,7 @@ The public release at [app.mutinynet.inscrib3.com](https://app.mutinynet.inscrib
 - Arkade asset-to-asset swaps;
 - reserve-based price charts from 1 minute through 30 days;
 - permissionless pool creation and asset issuance;
+- fixed-supply launches with a BTC bonding curve and atomic graduation into permanent liquidity;
 - liquidity deposits and LP redemptions;
 - pool search, reserve details, fees, activity, and supply-control warnings;
 - wallet-specific activity, portable points, personal rank, and a live leaderboard;
@@ -46,4 +47,4 @@ The public user-facing components can be inspected independently:
 - [Documentation](https://github.com/inscrib3/docs.inscrib3.com);
 - [Main website](https://github.com/inscrib3/inscrib3.com).
 
-Start with the [Mutinynet setup guide](/app/getting-started), then read the [risk model](/app/security) before approving a transaction.
+Start with the [Mutinynet setup guide](/app/getting-started), explore the [Bitcoin-native launchpad](/app/launchpad), then read the [risk model](/app/security) before approving a transaction.

@@ -41,3 +41,9 @@ An opened pool earns **10 points**. A request that never reaches `opened` does n
 An Arkade asset with a `controlAssetId` can be reissued by whoever controls that asset. The App displays a controlled-supply warning because future issuance can materially change pool economics. The warning is informational, not an endorsement or risk score.
 
 Always verify the full asset ID. Names and tickers are not unique identities.
+
+## Launch assets and generic pools
+
+Assets registered by the Inscrib3 launchpad cannot be used to create a generic pool through the official App or API. Before any pool-specific assets are issued, the App checks the pair; the API independently rejects the registration and does not return a bootstrap address.
+
+Launch assets trade through their bonding curve and, after atomic graduation, their canonical permanent pool. This restriction applies to the Inscrib3 product surface rather than the permissionless AMM covenant. External markets remain technically possible and are not canonical or endorsed. See [Bitcoin-native launchpad](/app/launchpad).

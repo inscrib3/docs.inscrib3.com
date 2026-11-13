@@ -21,7 +21,7 @@ Choose between the `window.arkade` provider and the PWA fallback.
 
 ## Inscrib3 App — live on Mutinynet
 
-[Inscrib3 App](https://app.mutinynet.inscrib3.com) is the open-source interface for native BTC and Arkade asset swaps, permissionless pools, liquidity, price history, wallet activity, and portable points.
+[Inscrib3 App](https://app.mutinynet.inscrib3.com) is the open-source interface for native BTC and Arkade asset swaps, permissionless pools, fixed-supply token launches, liquidity, price history, wallet activity, and portable points.
 
 ::: warning MUTINYNET RELEASE
 The public App currently runs on **Mutinynet**, not Bitcoin mainnet. Use Mutinynet test funds only. The interface verifies that the App, API, and connected wallet are on the same network before requesting a transaction.
@@ -33,7 +33,11 @@ Install the wallet extension, switch it to Mutinynet, get test funds, and comple
 
 ### [Understand points and Mainnet migration](/app/points)
 
-Opened pools earn 10 points. Settled swaps earn points based on sat-equivalent protocol fees, with a minimum of one point. **Points earned during the Mutinynet release will be migrated to Mainnet** and remain attributable to the same wallet identity.
+Opened pools and launches earn 10 points. Settled pool and launch trades earn points based on protocol fee sats, with a minimum of one point. **Points earned during the Mutinynet release will be migrated to Mainnet** and remain attributable to the same wallet identity.
+
+### [Launch a fixed-supply asset](/app/launchpad)
+
+Model a BTC bonding curve, issue from your own wallet, and graduate atomically into a canonical permanent pool with no administrator-controlled liquidity exit.
 
 ## Inscrib3 Wallet
 

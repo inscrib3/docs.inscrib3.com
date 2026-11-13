@@ -24,6 +24,8 @@ The current App, coordinator, and contracts are early software running on Mutiny
 - **Experimental contracts:** defects may produce unexpected settlement or refund behavior.
 - **Liquidity risk:** thin reserves can produce high price impact.
 - **Asset risk:** issuers controlling a `controlAssetId` may create additional supply.
+- **Launch risk:** curve parameters, fees, graduation threshold, and reserved liquidity are immutable once funded; a popular name or ticker is not proof of identity or quality.
+- **External-market risk:** holders can create markets outside Inscrib3. Only the launch's predetermined permanent pool is canonical.
 - **Asynchronous settlement:** funded requests wait for a sweep and are not instant.
 - **Infrastructure risk:** the API, Ark server, indexer, or Mutinynet may be unavailable.
 - **Testnet resets:** Mutinynet state has no permanence guarantee comparable to Bitcoin mainnet.
@@ -44,7 +46,11 @@ Refresh pool state. The contract, Ark server, API, or required reserves may be t
 
 ### My points are missing
 
-Only opened pools and settled swaps qualify. Confirm the action's terminal status and that the connected wallet is the wallet that funded it. Points refresh automatically; use the Activity refresh control if needed.
+Only opened pools or launches and settled pool or launch trades qualify. Confirm the action's terminal status and that the connected wallet is the wallet that funded it. Points refresh automatically; use the Activity refresh control if needed.
+
+### A launch payment was sent but opening or trading did not finish
+
+Do not issue another token supply and do not pay a second request. Keep the saved transaction ID, retry the same opening or registration flow, and check the launch and **My Activity** status. Use a refund only when the App reports that the funded request is refundable.
 
 ## Verify the implementation
 

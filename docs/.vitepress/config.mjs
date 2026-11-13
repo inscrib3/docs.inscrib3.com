@@ -90,6 +90,7 @@ export default defineConfig({
           { text: 'Get started on Mutinynet', link: '/app/getting-started' },
           { text: 'Swaps and price charts', link: '/app/swaps' },
           { text: 'Pools and liquidity', link: '/app/pools-liquidity' },
+          { text: 'Bitcoin-native launchpad', link: '/app/launchpad' },
           { text: 'Points and Mainnet migration', link: '/app/points' },
           { text: 'Risks and troubleshooting', link: '/app/security' },
         ],
