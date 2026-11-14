@@ -109,6 +109,14 @@ window.addEventListener('message', (event) => {
 
 Method names match the extension RPC, including `arkade_getBalance`, `arkade_getAssets`, `arkade_sendAsset`, `arkade_issueAsset`, `arkade_settle`, and `arkade_switchNetwork`. Read methods answer directly while unlocked. Sends, asset lifecycle operations, settlement, signing, and network changes show an approval screen.
 
+## Installed iOS PWA
+
+iOS may detach or replace the opener when one installed PWA opens another origin. Detect iOS standalone mode and use a visible wallet iframe instead of relying on a popup. Set `referrerPolicy="origin"`, keep the wallet on `https://wallet.inscrib3.com`, and validate both the wallet origin and the exact `iframe.contentWindow` on every message.
+
+The wallet requests Storage Access API permission from a user gesture before reading its existing first-party storage. Never render financial approvals in a hidden frame: show the wallet modal before sending any state-changing provider request and hide it only after the matching response.
+
+For clickjacking protection, the hosted wallet accepts embedded provider mode only from official Inscrib3 App origins. Third-party integrations continue to use the top-level popup protocol.
+
 ## Send
 
 Validate the amount before opening the popup. It must be expressed in satoshis and be a positive integer.

@@ -58,6 +58,7 @@ For this reason, do not open the PWA with `noreferrer`, and make sure your site'
 - [ ] use only `https://wallet.inscrib3.com` as the production wallet origin;
 - [ ] do not use `noopener` or `noreferrer` for this popup;
 - [ ] verify both `event.origin` and `event.source`;
+- [ ] for the iOS embedded fallback, require `event.source === walletIframe.contentWindow` and keep the approval frame visible;
 - [ ] validate the payload's shape and type;
 - [ ] keep the exact provider window reference, check `popup.closed`, and remove listeners when it closes;
 - [ ] handle rejection, failure, and closure as separate outcomes;

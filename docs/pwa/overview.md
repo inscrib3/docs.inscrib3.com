@@ -21,6 +21,8 @@ When `window.arkade` is unavailable, an App can open [Inscrib3 Wallet](https://w
 
 The provider window covers the public `window.arkade` API. The App can wrap it in a local provider object so application code uses the same interface with or without the extension.
 
+On installed iOS PWAs, cross-origin `window.opener` is not reliable. The supported fallback embeds the wallet provider in a visible cross-origin modal, verifies `event.source === iframe.contentWindow`, and requests first-party wallet storage through the Storage Access API. Browser and extension integrations continue using their existing provider window.
+
 ## Flow
 
 ### 1. Open the popup
