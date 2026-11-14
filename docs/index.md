@@ -72,7 +72,7 @@ An App can communicate with the wallet in two ways:
 | Mode | Transport | Capabilities | When to use it |
 | --- | --- | --- | --- |
 | Extension | `window.arkade` | Full provider API | When the extension is installed |
-| PWA | Popup and `postMessage` | Connect and send BTC to Ark addresses | As a fallback without the extension |
+| PWA | Provider window and `postMessage` | Full public provider API with explicit approvals | As a fallback without the extension |
 
 ### [Go to the quickstart](/getting-started/quickstart)
 

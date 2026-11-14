@@ -5,34 +5,39 @@ description: "Integrate Inscrib3 Wallet without the extension by using a popup a
 
 # PWA fallback
 
-When `window.arkade` is unavailable, an App can open [Inscrib3 Wallet](https://wallet.inscrib3.com) in a popup. The PWA shows the calling origin, asks the user to create or unlock the wallet when necessary, and presents the operation for approval.
+When `window.arkade` is unavailable, an App can open [Inscrib3 Wallet](https://wallet.inscrib3.com) as a provider window. The wallet shows the calling origin, asks the user to create or unlock it when necessary, and keeps the verified window open for provider requests and events.
 
 ## Available capabilities
 
 | Operation | Parameters | Successful response |
 | --- | --- | --- |
-| Connect | None | Active Ark address |
+| Connect | Optional `bitcoin` or `mutinynet` target | Active Ark address on the approved network |
 | Send BTC | Ark address and satoshis | Txid |
+| Send assets | Ark address, raw asset amounts, optional BTC carrier | Txid |
+| Read wallet state | Address, network, balances, assets, and history | Provider-compatible values |
+| Asset lifecycle | Issue, reissue, and burn | Asset result or txid |
+| Sign and settle | Message or settlement request | Signature or txid |
+| Events | Account, network, lock, and unlock changes | Provider event |
 
-The PWA fallback does not expose the extension's full API. Balance, assets, history, message signing, and settlement require `window.arkade`.
+The provider window covers the public `window.arkade` API. The App can wrap it in a local provider object so application code uses the same interface with or without the extension.
 
 ## Flow
 
 ### 1. Open the popup
 
-The App opens `wallet.inscrib3.com` with parameters identifying a connection or send request.
+The App opens `wallet.inscrib3.com` with a requested network. After approval, the same window carries provider requests and events.
 
 ### 2. Verify the origin
 
-The PWA derives the origin from `document.referrer`. The values of `arkade_connect_origin` and `arkade_send_origin` are not trusted.
+The PWA derives the origin from `document.referrer`. Query-string origin markers are not trusted.
 
 ### 3. Get approval
 
-The user creates or unlocks the wallet, reviews the origin, network, account, and request details, then approves or rejects.
+The user creates or unlocks the wallet, reviews the origin, requested network, account, assets, raw amounts, BTC carrier, and destination as applicable, then approves or rejects.
 
 ### 4. Receive the result
 
-The PWA replies to the opener with `postMessage`, using the verified origin, and closes the popup.
+The wallet replies to the opener with `postMessage`, using the verified origin. Keep the provider window open; closing it disconnects the App. Legacy one-shot sends still close after completion.
 
 ::: warning
 Open the popup without `noopener` and without `noreferrer`. If `window.opener` or `document.referrer` is unavailable, the PWA does not enter integration mode.

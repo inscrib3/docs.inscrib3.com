@@ -7,7 +7,7 @@ description: "Install Inscrib3 Wallet, switch to Mutinynet, connect to the App, 
 
 ## 1. Install the browser extension
 
-Install [Inscrib3 Wallet from the Chrome Web Store](https://chromewebstore.google.com/detail/inscrib3/hafphignbjdmblopkophkohgnphalclg). The hosted PWA is useful for normal wallet operations, but the App requires the extension's full `window.arkade` provider for swaps, liquidity, issuance, and pool creation.
+Install [Inscrib3 Wallet from the Chrome Web Store](https://chromewebstore.google.com/detail/inscrib3/hafphignbjdmblopkophkohgnphalclg), or install the App as a PWA and connect its hosted wallet provider window. Both paths support balances/MAX, swaps, liquidity, asset issuance, pool creation, and launch creation. Keep the wallet window open when using the PWA; every financial or signing request appears there for explicit approval.
 
 Back up the wallet mnemonic offline. Never paste it into the App or any website.
 

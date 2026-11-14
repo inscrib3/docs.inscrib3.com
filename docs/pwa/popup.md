@@ -1,11 +1,11 @@
 ---
 title: "Integrate the popup"
-description: "A complete implementation for connecting and sending through the Inscrib3 Wallet PWA."
+description: "Connect a provider-compatible App to the Inscrib3 Wallet PWA."
 ---
 
 # Integrate the popup
 
-Use one helper to open the popup, listen for the response, verify its sender, and detect manual closure.
+Open the wallet once, verify the connection response, then keep that exact window as the provider transport. Legacy one-shot sends remain supported, but a provider session is required for full App parity.
 
 ## JavaScript helper
 
@@ -59,8 +59,8 @@ Do not add `noopener` or `noreferrer` to the `window.open` features. They are no
 The value of `arkade_connect_origin` is ignored: the parameter's presence selects the operation, while the origin is derived from the referrer.
 
 ```js connect-pwa.js
-async function connectWithPwa() {
-  const reply = await walletPopup({ arkade_connect_origin: '1' });
+async function connectWithPwa(network = 'mutinynet') {
+  const reply = await walletPopup({ arkade_connect_origin: '1', arkade_connect_network: network });
 
   if (reply?.type === 'inscrib3:connect') {
     return reply.accounts;
@@ -73,6 +73,41 @@ async function connectWithPwa() {
   throw new Error('Unrecognized wallet response');
 }
 ```
+
+`arkade_connect_network` accepts `bitcoin` or `mutinynet`. When the active wallet network differs, the approval screen states that approving will switch networks before returning the address.
+
+## Provider session
+
+After `inscrib3:connect`, keep the popup reference and exchange provider messages with that same window:
+
+```js provider-session.js
+let id = 0;
+const pending = new Map();
+
+function request(walletWindow, method, params) {
+  const requestId = `pwa-${++id}`;
+  return new Promise((resolve, reject) => {
+    pending.set(requestId, { resolve, reject });
+    walletWindow.postMessage(
+      { type: 'inscrib3:provider_request', request: { id: requestId, method, params } },
+      WALLET_ORIGIN,
+    );
+  });
+}
+
+window.addEventListener('message', (event) => {
+  if (event.origin !== WALLET_ORIGIN || event.source !== walletWindow) return;
+  if (event.data?.type === 'inscrib3:provider_response') {
+    const open = pending.get(event.data.id);
+    if (!open) return;
+    pending.delete(event.data.id);
+    event.data.error ? open.reject(new Error(event.data.error)) : open.resolve(event.data.result);
+  }
+  if (event.data?.type === 'inscrib3:provider_event') emit(event.data.event, event.data.data);
+});
+```
+
+Method names match the extension RPC, including `arkade_getBalance`, `arkade_getAssets`, `arkade_sendAsset`, `arkade_issueAsset`, `arkade_settle`, and `arkade_switchNetwork`. Read methods answer directly while unlocked. Sends, asset lifecycle operations, settlement, signing, and network changes show an approval screen.
 
 ## Send
 
@@ -103,6 +138,34 @@ async function sendWithPwa(address, amountSats) {
 }
 ```
 
+## Send Arkade assets
+
+Asset amounts are positive safe integers in raw units. When present, the optional BTC carrier is also a positive safe integer in sats.
+
+```js send-assets-pwa.js
+async function sendAssetsWithPwa(address, assets, bitcoinAmount) {
+  const reply = await walletPopup({
+    arkade_send_asset_origin: '1',
+    arkade_send_asset_address: address,
+    arkade_send_asset_assets: JSON.stringify(assets),
+    ...(bitcoinAmount == null
+      ? {}
+      : { arkade_send_asset_bitcoin_amount: String(bitcoinAmount) }),
+  });
+
+  switch (reply?.type) {
+    case 'inscrib3:send_asset':
+      return reply.txid;
+    case 'inscrib3:send_asset_failed':
+      throw new Error(reply.error || 'Asset send failed');
+    case 'inscrib3:send_asset_rejected':
+      throw new Error('Asset send rejected');
+    default:
+      throw new Error('Unrecognized wallet response');
+  }
+}
+```
+
 ## Use it from a button
 
 ```js ui.js
@@ -117,5 +180,5 @@ connectButton.addEventListener('click', async () => {
 ```
 
 ::: info
-A PWA connection does not grant the App a persistent permission equivalent to the extension. Every popup presents an explicit request to the user.
+The provider session lasts only while the verified wallet window remains open. It never grants background custody: every financial or signing request still requires explicit approval.
 :::

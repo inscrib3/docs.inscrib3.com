@@ -30,6 +30,7 @@ interface ArkadeProvider {
   getXOnlyPublicKey(): Promise<string>;
   getBalance(): Promise<BalanceInfo>;
   getNetwork(): Promise<NetworkInfo>;
+  switchNetwork(network: 'bitcoin' | 'mutinynet'): Promise<boolean>;
   getAssets(): Promise<AssetInfo[]>;
   getTransactionHistory(): Promise<TxHistoryEntry[]>;
 

@@ -84,4 +84,4 @@ Burning reduces supply by destroying the selected units. It cannot be reversed, 
 
 Connected Apps can request the same operations through `window.arkade`. Every request opens a dedicated approval window in the extension. See the [asset API guide](/provider/assets) for parameters, return values, validation, and examples.
 
-The PWA popup fallback supports only connecting and sending BTC. Users can manage assets directly inside the web wallet, but an external App needs the extension provider to request asset operations.
+The PWA provider window supports balance and asset discovery, sending existing assets, and the issue, reissue, and burn lifecycle. Amounts remain raw safe integers, optional BTC carriers are explicit, and every state-changing request requires approval in the wallet window.

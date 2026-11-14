@@ -5,7 +5,7 @@ description: "Integrate the Arkade asset lifecycle through the Inscrib3 Wallet p
 
 # Asset issuance, reissuance, and burn
 
-The extension provider exposes three methods for the Arkade asset lifecycle. The origin must be connected, the wallet must be unlocked, and every call requires a separate user approval.
+Both the extension provider and the PWA provider window expose three methods for the Arkade asset lifecycle. The origin must be connected, the wallet must be unlocked, and every call requires a separate user approval.
 
 | Method | Purpose | Returns |
 | --- | --- | --- |

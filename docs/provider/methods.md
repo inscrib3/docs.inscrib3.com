@@ -20,6 +20,7 @@ Every method returns a `Promise`. Unless stated otherwise, methods require a con
 | `getBoardingAddress()` | On-chain address for entering Ark | No |
 | `getXOnlyPublicKey()` | Hex-encoded x-only public key | No |
 | `getNetwork()` | `NetworkInfo` | No |
+| `switchNetwork('bitcoin' | 'mutinynet')` | `true` | When changing network |
 
 ```js account-data.js
 const [address, boardingAddress, publicKey, network] = await Promise.all([
@@ -28,6 +29,8 @@ const [address, boardingAddress, publicKey, network] = await Promise.all([
   window.arkade.getXOnlyPublicKey(),
   window.arkade.getNetwork(),
 ]);
+
+await window.arkade.switchNetwork('mutinynet');
 ```
 
 ## Balance, assets, and history

@@ -5,19 +5,26 @@ description: "Reference for postMessage responses and required PWA fallback secu
 
 # PWA messages and security
 
-The PWA replies with an object in `event.data` before closing. The App must verify the message before using it.
+The wallet exchanges objects in `event.data` with its opener. The App must verify every connection response, provider response, and event before using it.
 
 ## Message types
 
 | `event.data.type` | Additional fields | Meaning |
 | --- | --- | --- |
-| `inscrib3:connect` | `accounts: string[]` | Connection approved |
+| `inscrib3:connect` | `accounts: string[]` | Connection and optional network switch approved |
+| `inscrib3:connect_failed` | `error: string` | Approved network switch or connection failed |
 | `inscrib3:connect_rejected` | None | Connection rejected |
 | `inscrib3:send` | `txid: string` | Send completed |
 | `inscrib3:send_failed` | `error: string` | Send approved but failed |
 | `inscrib3:send_rejected` | None | Send rejected |
+| `inscrib3:send_asset` | `txid: string` | Asset send completed |
+| `inscrib3:send_asset_failed` | `error: string` | Asset send approved but failed |
+| `inscrib3:send_asset_rejected` | None | Asset send rejected |
+| `inscrib3:provider_request` | `request: { id, method, params? }` | App-to-wallet provider call |
+| `inscrib3:provider_response` | `id`, plus `result` or `error` | Wallet result for one provider call |
+| `inscrib3:provider_event` | `event`, optional `data` | Account, network, lock, or unlock event |
 
-If the user closes the window, no message is sent. Check `popup.closed` periodically to settle the Promise.
+If the user closes the provider window, no final message is guaranteed. Check `popup.closed`, reject pending calls, and treat the provider as disconnected.
 
 ## Required checks
 
@@ -52,9 +59,9 @@ For this reason, do not open the PWA with `noreferrer`, and make sure your site'
 - [ ] do not use `noopener` or `noreferrer` for this popup;
 - [ ] verify both `event.origin` and `event.source`;
 - [ ] validate the payload's shape and type;
-- [ ] check `popup.closed` and remove the listener and interval;
+- [ ] keep the exact provider window reference, check `popup.closed`, and remove listeners when it closes;
 - [ ] handle rejection, failure, and closure as separate outcomes;
-- [ ] validate the address and satoshis before opening;
+- [ ] validate the requested network, address, satoshis, asset IDs, and raw asset amounts before opening;
 - [ ] do not assume the PWA and extension contain the same wallet.
 
 ## PWA isolation
