@@ -15,7 +15,7 @@ Back up the wallet mnemonic offline. Never paste it into the App or any website.
 
 Open wallet settings and select **Mutinynet**. The public App rejects transaction requests when the wallet and API networks do not match.
 
-Mutinynet addresses begin with `tark1…`. A future Mainnet deployment uses a different network prefix, but the portable points identity is derived from the wallet key rather than that prefix.
+Mutinynet addresses begin with `tark1…`. A future Mainnet deployment uses a different operator and address, while the portable points identity uses a dedicated network-independent account key.
 
 ## 3. Obtain test funds
 

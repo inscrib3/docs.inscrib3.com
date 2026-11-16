@@ -19,6 +19,7 @@ Every method returns a `Promise`. Unless stated otherwise, methods require a con
 | `getAddress()` | Active Ark address | No |
 | `getBoardingAddress()` | On-chain address for entering Ark | No |
 | `getXOnlyPublicKey()` | Hex-encoded x-only public key | No |
+| `getPointsPublicKey()` | Stable account identity for points and profiles; never a funds key | No |
 | `getNetwork()` | `NetworkInfo` | No |
 | `switchNetwork('bitcoin' | 'mutinynet')` | `true` | When changing network |
 

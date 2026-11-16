@@ -28,6 +28,7 @@ interface ArkadeProvider {
   getAddress(): Promise<string>;
   getBoardingAddress(): Promise<string>;
   getXOnlyPublicKey(): Promise<string>;
+  getPointsPublicKey(): Promise<string>;
   getBalance(): Promise<BalanceInfo>;
   getNetwork(): Promise<NetworkInfo>;
   switchNetwork(network: 'bitcoin' | 'mutinynet'): Promise<boolean>;

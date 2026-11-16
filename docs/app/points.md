@@ -37,7 +37,7 @@ Rewards are created only after the qualifying action settles or a pool or launch
 
 ## How portability works
 
-Points are not bound to the textual `tark1…` Mutinynet address. The backend extracts the wallet's x-only Taproot identity key from its Arkade address. That identity remains stable when the same wallet moves between the Mutinynet `tark` prefix and the Mainnet `ark` prefix.
+Points are not bound to the textual `tark1…` Mutinynet address or its Taproot output key. The wallet derives a dedicated account identity on a network-independent path. On first registration it signs a BIP-322 statement linking that points key to the active Ark signing key, while the backend independently verifies that the active key constructs the supplied Arkade address. Existing address-keyed points migrate to the stable identity automatically.
 
 ::: tip MAINNET MIGRATION COMMITMENT
 **Points earned in the current Mutinynet release will be migrated to Mainnet.** Connect the Mainnet deployment with the same wallet identity and the migrated score will remain attributable to you.
